@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- SWIPER -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/swiper-bundle.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <nav class="nav bd-container" id="main-nav">
+            <a href="#" class="nav__logo" id="nav-logo">TRAVEL</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#discover" class="nav__link">Discover</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#places" class="nav__link">Places</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- <div> -->
+                <i class="fa fa-bars nav__toggle" id="nav-toggle"></i>
+            <!-- </div> -->
+        </nav>
+    </header>
+    
+    <!-- MAIN -->
+    <main class="main" id="main">
+        <!-- HOME -->
+        <section class="home section" id="home">
+            <div class="swiper gallery-top">
+                <div class="swiper-wrapper">
+                    <!-- ISLANDS 1 -->
+                    <section class="islands swiper-slide">
+                        <img src="./assets/img/hon-mun.png" alt="hon-mun" class="islands__bg">
+
+                        <div class="islands__container bd-container">
+                            <div class="islands__data">
+                                <h2 class="islands__subtitle">Islands</h2>
+                                <h1 class="islands__title">Hòn Mun</h1>
+                                <p class="islands__description">Located in the south of Hòn Tre island, 10km from Cầu Đá port, about 14km from Nha Trang city center.</p>
+                                <a href="#" class="islands__button">
+                                    Explore <i class="fa fa-arrow-right islands__button-icon"></i>
+                                </a>
+                            </div>
+
+                            <div class="islands__video">
+                                <div class="islands__video-content">
+                                    <i class="fa fa-circle-play islands__video-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ISLANDS 2 -->
+                    <section class="islands swiper-slide">
+                        <img src="./assets/img/diep-son.jpg" alt="diep-son" class="islands__bg">
+
+                        <div class="islands__container bd-container">
+                            <div class="islands__data">
+                                <h2 class="islands__subtitle">Islands</h2>
+                                <h1 class="islands__title">Điệp Sơn</h1>
+                                <p class="islands__description">Located in Vân Phong Bay, Khánh Hòa, about 60km from Nha Trang city, including 3 small islands: Hòn Bìm, Hòn Giữa, Hòn Đước.</p>
+                                <a href="#" class="islands__button">
+                                    Explore <i class="fa fa-arrow-right islands__button-icon"></i>
+                                </a>
+                            </div>
+
+                            <div class="islands__video">
+                                <div class="islands__video-content">
+                                    <i class="fa fa-circle-play islands__video-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ISLANDS 3 -->
+                    <section class="islands swiper-slide">
+                        <img src="./assets/img/binh-ba.jpg" alt="binh-ba" class="islands__bg">
+
+                        <div class="islands__container bd-container">
+                            <div class="islands__data">
+                                <h2 class="islands__subtitle">Islands</h2>
+                                <h1 class="islands__title">Bình Ba</h1>
+                                <p class="islands__description">Located in Cam Ranh city, Khánh Hòa province, Bình Ba is 60km south of Nha Trang city.</p>
+                                <a href="#" class="islands__button">
+                                    Explore <i class="fa fa-arrow-right islands__button-icon"></i>
+                                </a>
+                            </div>
+
+                            <div class="islands__video">
+                                <div class="islands__video-content">
+                                    <i class="fa fa-circle-play islands__video-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- CONTROLS -->
+            <div class="controls swiper gallery-thumbs">
+                <div class="controls__container swiper-wrapper">
+                    <img src="./assets/img/hon-mun.png" alt="hon-mun" class="controls__img swiper-slide">
+                    <img src="./assets/img/diep-son.jpg" alt="diep-son" class="controls__img swiper-slide">
+                    <img src="./assets/img/binh-ba.jpg" alt="binh-ba" class="controls__img swiper-slide">
+                </div>
+            </div>
+        </section>
+
+        <!-- ISLANDS POPUP -->
+        <div class="islands__modal" id="modal">
+            <div class="islands__popup" id="popup">
+                <div>
+                    <div class="islands__popup-close" id="popup-close">
+                        <i class="fa fa-xmark islands__popup-close-icon"></i>
+                    </div>
+
+                    <iframe class="islands__popup-video" src="https://www.youtube.com/embed/wiXL60wHv9U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- ABOUT -->
+        <section class="section bd-container about" id="about">
+            
+            <div class="about__container bd-grid">
+                <h2 class="section__title about__title">More Information<br>About Nha Trang Islands</h2>
+
+                <img src="./assets/img/travel-nha-trang.jpg" alt="nha-trang-islands" class="about__img">
+
+                <div class="about__data bd-grid">
+                    <div class="about__content">
+                        <p class="about__description">You may be surprised at how fascinating and unspoiled the islands in Nha Trang are. Each island here is an unique world, which would satisfy any tourist of any requirement. According to experienced visitors, going to Nha Trang but not visiting its nearby islands would definitely be a miss.</p>
+                    </div>
+
+                    <a href="#about" class="button about__button">Reserve a place</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- DISCOVER -->
+        <section class="section bd-container discover" id="discover">
+            <h2 class="section__title">Discover The Most<br>Attractive Islands</h2>
+
+            <div class="discover__container">
+                <div class="swiper discover__swiper">
+                    <div class="swiper-wrapper">
+                        <div class="discover__box swiper-slide">
+                            <img src="./assets/img/hon-mun.png" alt="hon-mun" class="discover__box-bg">
+                            <div class="discover__box-content">
+                                <a href="#discover" class="discover__box-title">Hòn Mun</a>
+                                <p class="discover__box-description">an exotic beauty</p>
+                            </div>
+                        </div>
+
+                        <div class="discover__box swiper-slide">
+                            <img src="./assets/img/diep-son.jpg" alt="diep-son" class="discover__box-bg">
+                            <div class="discover__box-content">
+                                <a href="#discover" class="discover__box-title">Điệp Sơn</a>
+                                <p class="discover__box-description">a raw beauty</p>
+                            </div>
+                        </div>
+
+                        <div class="discover__box swiper-slide">
+                            <img src="./assets/img/binh-ba.jpg" alt="binh-ba" class="discover__box-bg">
+                            <div class="discover__box-content">
+                                <a href="#discover" class="discover__box-title">Bình Ba</a>
+                                <p class="discover__box-description">untouched and pristine</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- US -->
+        <section class="section bd-container bd-grid us">
+            <h2 class="section__title">With Our Experience<br>We Will Serve You</h2>
+
+            <div class="us__data bd-grid">
+                <div class="us__content bd-grid">
+                    <span class="us__content-number">6</span>
+                    <span class="use__content-text">Year<br>Experience</span>
+                </div>
+
+                <div class="us__content bd-grid">
+                    <span class="us__content-number">10</span>
+                    <span class="use__content-text">Company<br>Branches</span>
+                </div>
+
+                <div class="us__content bd-grid">
+                    <span class="us__content-number">650+</span>
+                    <span class="use__content-text">Service<br>Tours</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PLACES -->
+        <section class="section bd-container places" id="places">
+            <h2 class="section__title">Choose Your Place</h2>
+
+            <div class="places__container bd-grid">
+                <div class="places__box">
+                    <img src="./assets/img/hon-mun.png" alt="hon-mun" class="places__box-bg">
+                    <div class="places__box-content">
+                        <h3 class="places__box-title">Hòn Mun</h3>
+                    </div>
+                    <div class="places__box-link">
+                        <a href="#places" class="button">View Tour</a>
+                    </div>
+                </div>
+
+                <div class="places__box">
+                    <img src="./assets/img/diep-son.jpg" alt="diep-son" class="places__box-bg">
+                    <div class="places__box-content">
+                        <h3 class="places__box-title">Điệp Sơn</h3>
+                    </div>
+                    <div class="places__box-link">
+                        <a href="#places" class="button">View Tour</a>
+                    </div>
+                </div>
+
+                <div class="places__box">
+                    <img src="./assets/img/binh-ba.jpg" alt="binh-ba" class="places__box-bg">
+                    <div class="places__box-content">
+                        <h3 class="places__box-title">Bình Ba</h3>
+                    </div>
+                    <div class="places__box-link">
+                        <a href="#places" class="button">View Tour</a>
+                    </div>
+                </div>
+
+                <div class="places__box">
+                    <img src="./assets/img/hon-yen.jpg" alt="hon-yen" class="places__box-bg">
+                    <div class="places__box-content">
+                        <h3 class="places__box-title">Hòn Yến</h3>
+                    </div>
+                    <div class="places__box-link">
+                        <a href="#places" class="button">View Tour</a>
+                    </div>
+                </div>
+
+                <div class="places__box">
+                    <img src="./assets/img/hon-tre.jpg" alt="hon-tre" class="places__box-bg">
+                    <div class="places__box-content">
+                        <h3 class="places__box-title">Hòn Tre</h3>
+                    </div>
+                    <div class="places__box-link">
+                        <a href="#places" class="button">View Tour</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- SUBSCRIBE -->
+         <div class="bg">
+            <section class="section bd-container subscribe">
+                <h2 class="section__title">Subscribe<br>Our Newsletter</h2>
+                <div class="subscribe__container bd-grid">
+                    <p class="subscribe__description">Discover Vietnam your way!</p>
+
+                    <form action="" class="subscribe__form bd-container">
+                        <input type="email" placeholder="Enter your email" class="subscribe__input">
+                        <a href="#places" class="button">SUBSCRIBE</a>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+        <div class="footer__container bd-container bd-grid">
+            <div class="footer__content">
+                <h3 class="footer__title footer__title--logo">TRAVEL</h3>
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a href="#footer" class="footer__link">
+                            <i class="fa fa-location-dot"></i>Nha Trang City, Việt Nam
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#footer" class="footer__link">
+                            <i class="fa fa-phone"></i>+8436.495.6649
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="#footer" class="footer__link">
+                            <i class="fa fa-envelope"></i>vannghiadang79@gmail.com
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">EXPLORE</h3>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#home" class="footer__link">Home</a></li>
+                    <li class="footer__item"><a href="#about" class="footer__link">About</a></li>
+                    <li class="footer__item"><a href="#discover" class="footer__link">Discover</a></li>
+                    <li class="footer__item"><a href="#places" class="footer__link">Places</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">OUR SERVICES</h3>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#footer" class="footer__link">Tours</a></li>
+                    <li class="footer__item"><a href="#footer" class="footer__link">Pricing</a></li>
+                    <li class="footer__item"><a href="#footer" class="footer__link">Discounts</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__content">
+                <h3 class="footer__title">FOLLOW US</h3>
+                <div class="footer__socials">
+                    <a href="#" target="_blank" class="footer__social"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" target="_blank" class="footer__social"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" target="_blank" class="footer__social"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <p class="footer__copy">&#169; 2022 copyright all right reserved</p>
+    </footer>
+
+    <!-- SCROLL UP -->
+    <a href="#" class="scroll-up" id="scroll-up">
+        <i class="fa fa-arrow-up scroll-up__icon"></i>
+    </a>
+
+    <!-- GSAP -->
+    <script src="./assets/js/gsap.min.js"></script>
+
+    <!-- SWIPER JS -->
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+
+    <!-- MAIN JS -->
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

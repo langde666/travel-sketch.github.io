@@ -15,11 +15,11 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
-<body>
+<body class="">
     <!-- HEADER -->
     <header class="header" id="header">
         <nav class="nav bd-container" id="main-nav">
-            <a href="#" class="nav__logo" id="nav-logo">TRAVEL</a>
+            <a href="#" class="nav__logo logo" id="nav-logo">TRAVEL</a>
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
@@ -35,12 +35,18 @@
                     <li class="nav__item">
                         <a href="#places" class="nav__link">Places</a>
                     </li>
+                    <li class="nav__item">
+                         
+                    </li>
                 </ul>
             </div>
 
-            <!-- <div> -->
+            <div class="nav__tabs">
                 <i class="fa fa-bars nav__toggle" id="nav-toggle"></i>
-            <!-- </div> -->
+
+                <!-- THEME CHANGE BUTTON -->
+                <i class="fa fa-moon change-theme" id="theme-button"></i>  
+            </div>
         </nav>
     </header>
     
@@ -127,19 +133,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- ISLANDS POPUP -->
-        <div class="islands__modal" id="modal">
-            <div class="islands__popup" id="popup">
-                <div>
-                    <div class="islands__popup-close" id="popup-close">
-                        <i class="fa fa-xmark islands__popup-close-icon"></i>
-                    </div>
-
-                    <iframe class="islands__popup-video" src="https://www.youtube.com/embed/wiXL60wHv9U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
 
         <!-- ABOUT -->
         <section class="section bd-container about" id="about">
@@ -290,11 +283,25 @@
         </div>
     </main>
 
+    <!-- ISLANDS POPUP -->
+    <div class="islands__popup" id="popup">
+        <div>
+            <div class="islands__popup-close" id="popup-close">
+                <i class="fa fa-xmark islands__popup-close-icon"></i>
+            </div>
+
+            <iframe class="islands__popup-video" src="https://www.youtube.com/embed/wiXL60wHv9U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal"></div>
+
     <!-- FOOTER -->
     <footer class="footer" id="footer">
         <div class="footer__container bd-container bd-grid">
             <div class="footer__content">
-                <h3 class="footer__title footer__title--logo">TRAVEL</h3>
+                <h3 class="footer__title footer__title--logo logo">TRAVEL</h3>
                 <ul class="footer__list">
                     <li class="footer__item">
                         <a href="#footer" class="footer__link">
@@ -343,7 +350,7 @@
             </div>
         </div>
 
-        <p class="footer__copy">&#169; 2022 copyright all right reserved</p>
+        <p class="footer__copy">&#169; <a href="https://www.langde-666.tk/" target="_blank" class="footer__link">Langde666</a>. All right reserved</p>
     </footer>
 
     <!-- SCROLL UP -->

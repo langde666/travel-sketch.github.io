@@ -67,6 +67,22 @@ const closePopupBtn = document.getElementById('popup-close');
 const modal = document.getElementById('modal');
 const popup = document.getElementById('popup');
 
+/**
+ * Stop an iframe or HTML5 <video> from playing
+ * @param  {Element} element The element that contains the video
+ */
+ const stopVideo = function (element) {
+	let iframe = element.querySelector( 'iframe');
+	let video = element.querySelector( 'video' );
+	if (iframe) {
+		let iframeSrc = iframe.src;
+		iframe.src = iframeSrc;
+	}
+	if (video) {
+		video.pause();
+	}
+};
+
 showPopupBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         modal.classList.add('show-modal');
@@ -77,6 +93,13 @@ showPopupBtns.forEach(btn => {
 closePopupBtn.addEventListener('click', () => {
     modal.classList.remove('show-modal');
     popup.classList.remove('show-popup');
+    stopVideo(popup);
+});
+
+modal.addEventListener('click', function(){
+    this.classList.remove('show-modal');
+    popup.classList.remove('show-popup');
+    stopVideo(popup);
 });
 
 // SWIPER
@@ -125,4 +148,37 @@ window.addEventListener('scroll', function(){
     else {
         scrollUp.classList.remove('show-scroll');
     }
+});
+
+// DARK LIGHT THEME
+const themeBtn = document.getElementById('theme-button');
+const darkTheme = 'dark-theme';
+const iconTheme = 'fa-sun';
+
+// Handle previously selected theme
+const selectedTheme = localStorage.getItem('selectedTheme');
+const selectedIcon = localStorage.getItem('selectedIcon');
+
+if (selectedTheme) {
+    if (selectedTheme === 'dark') {
+        document.body.classList.add(darkTheme);
+        themeBtn.classList.add(iconTheme);
+    }
+    else {
+        document.body.classList.remove(darkTheme);
+        themeBtn.classList.remove(iconTheme);
+    }
+}
+
+// Theme Button
+themeBtn.addEventListener('click', () => {
+    const currentTheme = document.body.classList.contains(darkTheme) ? 'light' : 'dark';
+    const currentIcon = themeBtn.classList.contains(iconTheme) ? 'fa-sun' : 'fa-moon';
+
+    document.body.classList.toggle(darkTheme);
+    themeBtn.classList.toggle(iconTheme);
+
+    // Save to localStorage
+    localStorage.setItem('selectedTheme', currentTheme);
+    localStorage.setItem('selectedIcon', currentIcon);
 });
